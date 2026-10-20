@@ -1,32 +1,63 @@
-# React + TypeScript + Vite
+# NEXUS AI Command Center
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A futuristic AI command center featuring a cybersecurity-inspired dashboard, interactive command console, task manager, neural notes, and AI assistant.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Cybersecurity Dashboard** — A futuristic interface for system and threat information.
+- **Command Console** — Interactive commands for exploring the NEXUS interface.
+- **Task Manager** — Manage tasks with persistent local storage.
+- **Neural Notes** — Save notes in your browser.
+- **AI Assistant** — Chat with an AI model through a local backend proxy.
+- **Responsive UI** — Dark theme with neon-inspired visual styling.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- Node.js and Express
+- FreeLLMAPI-compatible API endpoint
 
-## Expanding the Oxlint configuration
+## Run Locally
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Prerequisites
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- Node.js and npm
+- FreeLLMAPI running locally, if using its API endpoint
+
+### Installation
+
+```bash
+git clone https://github.com/VedhV/NEXUS-AI-Command-Center.git
+cd NEXUS-AI-Command-Center
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Create a `.env` file based on `.env.example` and configure your API key locally. **Never commit your `.env` file or publish API keys.**
+
+### Start the backend
+
+```bash
+npm run server
+```
+
+### Start the frontend
+
+In a second terminal:
+
+```bash
+npm run dev
+```
+
+Open the local URL printed by Vite in your terminal.
+
+## Security Notes
+
+- Keep API keys in environment variables.
+- Do not expose secret keys in frontend code.
+- The AI backend requires a reachable, correctly configured API endpoint.
+
+## Project Status
+
+Personal project — actively developing NEXUS AI Command Center.
