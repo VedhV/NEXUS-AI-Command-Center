@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .text-neon-cyan {
+    color: #00f0ff;
+  }
+  .bg-neon-cyan {
+    background-color: #00f0ff;
+  }
+  .border-neon-cyan {
+    border-color: #00f0ff;
+  }
+  .text-neon-violet {
+    color: #b000ff;
+  }
+  .bg-neon-violet {
+    background-color: #b000ff;
+  }
+  .border-neon-violet {
+    border-color: #b000ff;
+  }
+  .glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+  }
+  .glow-cyan-sm {
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+  }
+  .glow-violet {
+    box-shadow: 0 0 15px rgba(176, 0, 255, 0.4);
+  }
+  .glow-violet-sm {
+    box-shadow: 0 0 8px rgba(176, 0, 255, 0.3);
+  }
+  .glow-green {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+  }
+  .cyber-grid {
+    background-size: 30px 30px;
+    background-image:
+      linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  }
+  .scanlines {
+    background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%
+    ), linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.03),
+      rgba(0, 255, 0, 0.01),
+      rgba(0, 0, 255, 0.03)
+    );
+    background-size: 100% 4px, 6px 100%;
+  }
+}
+
+body {
+  background-color: #050508;
+  color: #c0c2ce;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for sci-fi look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090a10;
+}
+::-webkit-scrollbar-thumb {
+  background: #00f0ff55;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ffaa;
+}
